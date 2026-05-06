@@ -2,7 +2,7 @@ nameOverride: ""
 replicaCount: 1
 
 image:
-  repository: diplomademoacr.azurecr.io/diploma-demo-web
+  repository: pok1sdiplomaacr.azurecr.io/diploma-demo-web
   tag: dev-initial
   pullPolicy: IfNotPresent
 
@@ -84,4 +84,3 @@ hpa:
   minReplicas: 1
   maxReplicas: 3
   cpuAverageUtilization: 70
-

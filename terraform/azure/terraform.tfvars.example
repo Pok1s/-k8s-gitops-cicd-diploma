@@ -10,7 +10,6 @@ github_app_repo       = "diploma-demo-web"
 github_gitops_repo    = "diploma-gitops-repo"
 github_gitops_repo_url = "https://github.com/diploma-devops-lab/diploma-gitops-repo.git"
 
-acr_name = "diplomademoacr"
+acr_name = "pok1sdiplomaacr"
 
 admin_cidr_blocks = ["0.0.0.0/0"]
-

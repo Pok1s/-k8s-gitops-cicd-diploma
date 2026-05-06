@@ -26,7 +26,7 @@ local defaults = {
   autoSync: true,
   chartsRepo: 'https://github.com/diploma-devops-lab/diploma-gitops-repo.git',
   chartsRevision: 'main',
-  azureRegistry: 'diplomademoacr.azurecr.io',
+  azureRegistry: 'pok1sdiplomaacr.azurecr.io',
   helmChart: 'service',
   valuesFullPath: '',
   valuesHelmChartDir: '',
@@ -246,4 +246,3 @@ local mkSingleEnvItems(selectedEnvName) =
   kind: 'List',
   items: std.flattenArrays([mkSingleEnvItems(selectedEnvName) for selectedEnvName in envsToGenerate]),
 }
-

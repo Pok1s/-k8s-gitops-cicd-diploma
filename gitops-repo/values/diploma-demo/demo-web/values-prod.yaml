@@ -10,7 +10,7 @@ podLabels:
   stack: demo
   component: demo-web
 image:
-  repository: diplomademoacr.azurecr.io/diploma-demo-web
+  repository: pok1sdiplomaacr.azurecr.io/diploma-demo-web
   tag: prod-initial
 config:
   APP_NAME: diploma-demo-web
@@ -39,4 +39,3 @@ hpa:
   minReplicas: 3
   maxReplicas: 10
   cpuAverageUtilization: 60
-

@@ -54,7 +54,7 @@ variable "github_gitops_token" {
 
 variable "acr_name" {
   type    = string
-  default = "diplomademoacr"
+  default = "pok1sdiplomaacr"
 
   validation {
     condition     = can(regex("^[a-zA-Z0-9]{5,50}$", var.acr_name))
