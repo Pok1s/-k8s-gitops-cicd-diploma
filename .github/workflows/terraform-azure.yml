@@ -61,6 +61,18 @@ jobs:
 
       - name: Create Terraform state backend
         run: |
+          az provider register --namespace Microsoft.Storage
+          az provider register --namespace Microsoft.ContainerService
+          az provider register --namespace Microsoft.ContainerRegistry
+          az provider register --namespace Microsoft.Network
+          az provider register --namespace Microsoft.ManagedIdentity
+
+          az provider show --namespace Microsoft.Storage --query registrationState -o tsv
+          az provider show --namespace Microsoft.ContainerService --query registrationState -o tsv
+          az provider show --namespace Microsoft.ContainerRegistry --query registrationState -o tsv
+          az provider show --namespace Microsoft.Network --query registrationState -o tsv
+          az provider show --namespace Microsoft.ManagedIdentity --query registrationState -o tsv
+
           az group create \
             --name "${{ vars.TF_STATE_RESOURCE_GROUP }}" \
             --location "${{ vars.TF_STATE_LOCATION }}"
