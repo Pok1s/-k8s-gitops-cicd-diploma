@@ -69,7 +69,7 @@ variable "kubernetes_version" {
 
 variable "aks_system_node_count" {
   type    = number
-  default = 1
+  default = 2
 }
 
 variable "aks_system_vm_size" {
