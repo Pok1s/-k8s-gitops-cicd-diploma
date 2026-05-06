@@ -11,14 +11,14 @@ podLabels:
   component: demo-web
 image:
   repository: pok1sdiplomaacr.azurecr.io/diploma-demo-web
-  tag: dev-initial
+  tag: dev-f158a78-8
 config:
   APP_NAME: diploma-demo-web
   APP_ENV: dev
-  APP_VERSION: dev-initial
-  DEPLOYMENT_TIMESTAMP: "2026-05-06T20:00:00Z"
-  GIT_SHA: initial
-  PORT: "8080"
+  APP_VERSION: dev-f158a78-8
+  DEPLOYMENT_TIMESTAMP: '2026-05-06T23:18:50Z'
+  GIT_SHA: f158a78a19f0c49e8dd291286c131544c0a81f15
+  PORT: '8080'
 secret:
   enabled: true
   data:
