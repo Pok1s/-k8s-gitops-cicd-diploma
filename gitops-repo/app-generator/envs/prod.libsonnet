@@ -7,7 +7,6 @@ local defaultParameters = {
   'diploma-demo-prod': {
     env: 'prod',
     namespace: 'diploma-demo-prod',
-    autoSync: false,
     apps: {
       'demo-web': defaultParameters {
         valuesName: 'values-prod',
@@ -16,4 +15,3 @@ local defaultParameters = {
     },
   },
 }
-
