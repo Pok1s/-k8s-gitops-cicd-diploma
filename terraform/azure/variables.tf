@@ -69,12 +69,12 @@ variable "kubernetes_version" {
 
 variable "aks_system_node_count" {
   type    = number
-  default = 2
+  default = 1
 }
 
 variable "aks_system_vm_size" {
   type    = string
-  default = "Standard_B2s"
+  default = "Standard_DS2_v2"
 }
 
 variable "admin_cidr_blocks" {
