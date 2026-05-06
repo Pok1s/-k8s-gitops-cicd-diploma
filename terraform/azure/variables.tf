@@ -74,7 +74,7 @@ variable "aks_system_node_count" {
 
 variable "aks_system_vm_size" {
   type    = string
-  default = "Standard_DS2_v2"
+  default = "Standard_D2s_v3"
 }
 
 variable "admin_cidr_blocks" {
