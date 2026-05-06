@@ -17,7 +17,7 @@ resource "azuread_application_federated_identity_credential" "github_branches" {
 }
 
 resource "azuread_application_federated_identity_credential" "github_environments" {
-  for_each       = toset(["dev", "stage", "prod"])
+  for_each       = toset(["dev", "stage", "prod", "azure-plan", "azure-apply"])
   application_id = azuread_application.github_actions.id
   display_name   = "github-env-${each.key}"
   description    = "GitHub Actions OIDC for ${local.github_repo_full} environment ${each.key}"
@@ -31,4 +31,3 @@ resource "azurerm_role_assignment" "github_acr_push" {
   role_definition_name = "AcrPush"
   principal_id         = azuread_service_principal.github_actions.object_id
 }
-
