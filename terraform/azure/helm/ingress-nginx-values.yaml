@@ -7,5 +7,4 @@ controller:
   service:
     type: LoadBalancer
   admissionWebhooks:
-    enabled: true
-
+    enabled: false
