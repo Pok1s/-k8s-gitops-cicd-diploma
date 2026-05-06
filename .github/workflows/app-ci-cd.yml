@@ -6,14 +6,12 @@ on:
       - main
     paths:
       - demo-app-repo/**
-      - gitops-repo/**
       - .github/workflows/app-ci-cd.yml
   pull_request:
     branches:
       - main
     paths:
       - demo-app-repo/**
-      - gitops-repo/**
       - .github/workflows/app-ci-cd.yml
   workflow_dispatch:
     inputs:

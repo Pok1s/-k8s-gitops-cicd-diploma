@@ -6,8 +6,6 @@ podLabels:
   app/logs_json: "true"
 image:
   pullPolicy: IfNotPresent
-imagePullSecrets:
-  - name: regcred
 podSecurityContext:
   runAsNonRoot: true
   seccompProfile:
@@ -37,4 +35,3 @@ probes:
     path: /readyz
     initialDelaySeconds: 5
     periodSeconds: 10
-
