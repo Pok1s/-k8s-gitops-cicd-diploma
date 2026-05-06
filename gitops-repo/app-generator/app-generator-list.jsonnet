@@ -24,7 +24,7 @@ local defaults = {
   argocdNs: 'argocd',
   destServer: 'https://kubernetes.default.svc',
   autoSync: true,
-  chartsRepo: 'https://github.com/diploma-devops-lab/diploma-gitops-repo.git',
+  chartsRepo: 'https://github.com/Pok1s/-k8s-gitops-cicd-diploma.git',
   chartsRevision: 'main',
   azureRegistry: 'pok1sdiplomaacr.azurecr.io',
   helmChart: 'service',
@@ -83,13 +83,13 @@ local valuesFilePath(serviceName, serviceCfg, valuesName) =
   if std.type(valuesFullPath) == 'string' && valuesFullPath != '' then
     valuesFullPath
   else
-    '/values/' + valuesHelmChartDir + dirName + '/' + valuesName + '.yaml';
+    '/gitops-repo/values/' + valuesHelmChartDir + dirName + '/' + valuesName + '.yaml';
 
 local commonValuesFilePath(serviceCfg) =
   local dir = std.get(serviceCfg, 'valuesHelmChartDir', default=defaults.valuesHelmChartDir, inc_hidden=false);
   if std.type(dir) == 'string' && dir != '' then
     local project = std.split(dir, '/')[0];
-    '/values/' + project + '/common.yaml'
+    '/gitops-repo/values/' + project + '/common.yaml'
   else '';
 
 local imageUpdaterGitConfig(serviceCfg) = {
@@ -100,7 +100,7 @@ local imageUpdaterGitConfig(serviceCfg) = {
 local defaultServiceSource(serviceCfg) = {
   repoURL: std.get(serviceCfg, 'repoURL', default=defaults.chartsRepo, inc_hidden=false),
   targetRevision: std.get(serviceCfg, 'targetRevision', default=defaults.chartsRevision, inc_hidden=false),
-  path: std.get(serviceCfg, 'helmChartPath', default='charts/' + std.get(serviceCfg, 'helmChart', default=defaults.helmChart, inc_hidden=false), inc_hidden=false),
+  path: std.get(serviceCfg, 'helmChartPath', default='gitops-repo/charts/' + std.get(serviceCfg, 'helmChart', default=defaults.helmChart, inc_hidden=false), inc_hidden=false),
 };
 
 local mkServiceSource(selectedEnvName, serviceName, serviceCfg) =
