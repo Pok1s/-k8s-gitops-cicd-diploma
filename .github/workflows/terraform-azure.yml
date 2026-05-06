@@ -170,6 +170,10 @@ jobs:
       - name: Push generated GitHub secrets and variables
         env:
           GH_TOKEN: ${{ env.BOOTSTRAP_GITHUB_TOKEN }}
+          ARM_CLIENT_ID: ${{ env.BOOTSTRAP_AZURE_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ env.BOOTSTRAP_AZURE_CLIENT_SECRET }}
+          ARM_TENANT_ID: ${{ env.BOOTSTRAP_AZURE_TENANT_ID }}
+          ARM_SUBSCRIPTION_ID: ${{ env.BOOTSTRAP_AZURE_SUBSCRIPTION_ID }}
         run: |
           GENERATED_CLIENT_ID="$(terraform output -raw github_actions_client_id)"
           GENERATED_TENANT_ID="$(terraform output -raw github_actions_tenant_id)"
