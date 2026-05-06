@@ -11,13 +11,13 @@ podLabels:
   component: demo-web
 image:
   repository: pok1sdiplomaacr.azurecr.io/diploma-demo-web
-  tag: stage-4a7f710-4
+  tag: stage-ca6c806-5
 config:
   APP_NAME: diploma-demo-web
   APP_ENV: stage
-  APP_VERSION: stage-4a7f710-4
-  DEPLOYMENT_TIMESTAMP: '2026-05-06T23:01:44Z'
-  GIT_SHA: 4a7f710ddb4b016a908232347ebdf972ce1be81a
+  APP_VERSION: stage-ca6c806-5
+  DEPLOYMENT_TIMESTAMP: '2026-05-06T23:04:27Z'
+  GIT_SHA: ca6c80697bdafabcbeb5869894bc867cddc41252
   PORT: '8080'
 secret:
   enabled: true
